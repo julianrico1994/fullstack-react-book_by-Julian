@@ -1,0 +1,17 @@
+
+.vscode/
+#Node, React files to be ignored
+
+react_frontend/node_modules
+**/node_modules
+**/dist
+**/.idea
+**/npm-debug.log
+
+#Others git ignore for Node and React
+
+# testing
+**/coverage
+
+# production
+**/build
