@@ -36,8 +36,11 @@ module.exports = class extends React.Component {
   };
 
   onInputChange = ({ name, value, error }) => {
-    const fields = this.state.fields;
-    const fieldErrors = this.state.fieldErrors;
+    // const fields = this.state.fields; // INCORRECTO
+    // const fieldErrors = this.state.fieldErrors; // INCORRECTO
+    const fields = Object.assign({}, this.state.fields);
+    const fieldErrors  =  Object.assign({}, this.state.fieldErrors);  
+
 
     fields[name] = value;
     fieldErrors[name] = error;
@@ -49,7 +52,7 @@ module.exports = class extends React.Component {
     const person = this.state.fields;
     const fieldErrors = this.state.fieldErrors;
     const errMessages = Object.keys(fieldErrors).filter((k) => fieldErrors[k]);
-
+    console.log(`errMessages(${errMessages.length}): ${errMessages}`)
     if (!person.name) return true;
     if (!person.email) return true;
     if (errMessages.length) return true;

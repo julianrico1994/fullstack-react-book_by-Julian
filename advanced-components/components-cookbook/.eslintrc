@@ -5,6 +5,8 @@
   "parser": "babel-eslint",
   "root": true,
   "rules": {
+    "semi": ["never"],
+    "linebreak-style": ["error", "windows"],
     "max-len": ["error", { "code": 80, "ignoreTrailingComments": true }],
     "quote-props": [1, "consistent-as-needed"],
     "no-cond-assign": [2, "except-parens"],

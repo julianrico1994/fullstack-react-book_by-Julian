@@ -35,7 +35,8 @@ module.exports = class extends React.Component {
   };
 
   onInputChange = (evt) => {
-    const fields = this.state.fields;
+    // const fields = this.state.fields;  // INCORRECTO
+    const fields = Object.assign({}, this.state.fields);
     fields[evt.target.name] = evt.target.value;
     this.setState({ fields });
   };

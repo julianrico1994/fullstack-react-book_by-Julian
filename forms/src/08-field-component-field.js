@@ -19,6 +19,18 @@ module.exports = class extends React.Component {
     this.setState({ value: update.value });
   }
 
+  // getDerivedStateFromProps(nextProps) {
+  //   return { value: nextProps.value }
+  // }
+
+
+  // componentDidUpdate(prevProps, prevState) {
+  //   /* if (prevProps.someValue !== this.props.value) {
+  //     this.setState({ value: this.props.value });
+  //   } */
+  //   this.setState({ value: this.props.value });
+  // }
+
   onChange = (evt) => {
     const name = this.props.name;
     const value = evt.target.value;
@@ -37,7 +49,7 @@ module.exports = class extends React.Component {
           value={this.state.value}
           onChange={this.onChange}
         />
-        <span style={{ color: 'red' }}>{ this.state.error }</span>
+        <span style={{ color: 'red' }}>{this.state.error}</span>
       </div>
     );
   }
