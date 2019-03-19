@@ -28,14 +28,11 @@ class FoodSearch extends React.Component {
         showRemoveIcon: true,
       });
 
-      // console.log('Before `search()`');
       Client.search(value, (foods) => {
-        // console.log('Inside the callback');
         this.setState({
           foods: foods.slice(0, MATCHING_ITEM_LIMIT),
         });
       });
-      // console.log('After `search()`');
     }
   };
 

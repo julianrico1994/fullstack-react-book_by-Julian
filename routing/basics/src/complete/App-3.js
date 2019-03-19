@@ -9,9 +9,6 @@ const Route = ({ path, component }, { location }) => {
   const pathname = location.pathname;
   if (pathname.match(path)) {
     return (
-      // <React.Fragment>
-      //   {component}
-      // </React.Fragment>
       React.createElement(component)
     );
   } else {
