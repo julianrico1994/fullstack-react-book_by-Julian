@@ -1,0 +1,37 @@
+
+El problema de la instalacion sucede por un archivo externo llamado 'fsr-helpers' Segun parece, en 
+este proyecto en particular, el orden de las librerias afecta el resultado de instalacion (Este 
+error no sucede en la instalacion del proyecto 'routing/basics'). si esta de primero la instalacion 
+de "react-scripts" la cosa falla...
+...
+"devDependencies": {
+    "react-scripts": "1.1.1",
+    "fsr-helpers": "file:../../../fsr-helpers",
+  },
+...
+Debe hacerse de la siguiente manera °__°: Primero instalar "fsr-helpers": "file:../../../fsr-helpers"
+...
+"devDependencies": {
+    "fsr-helpers": "file:../../../fsr-helpers",
+    "react-scripts": "1.1.1"
+  },
+...
+o tambien funciona instalar directamente esta libreria desde la terminal, de alguna de las siguientes
+maneras
+
+npm install file:../../../fsr-helpers 
+npm install -save file:../../../fsr-helpers  --> De esta forma fue que descubri que el orden de las devDependencies afecta la instalacion
+
+
+
+
+Los mensajes de error que salian eran los siguientes (Falta un mensaje de error que se me perdio :/):
+
+PS C:\Users\JulianGarcia\Documents\Proyectos REACT\fullstack-react-book_by-Julian\routing\music\lient> npm i
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: core-js@2.4.1 (node_modules\fsr-helpers\node_modles\babel-polyfill\node_modules\core-js):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename 'C:\User\JulianGarcia\Documents\Proyectos REACT\fullstack-react-book_by-Julian\routing\music\client\nodemodules\.staging\core-js-a3a1546c' -> 'C:\Users\JulianGarcia\Documents\Proyectos REACT\fullstackreact-book_by-Julian\fsr-helpers\node_modules\babel-polyfill\node_modules\core-js'
+
+npm ERR! Maximum call stack size exceeded
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     C:\Users\JulianGarcia\AppData\Roaming\npm-cache\_logs\2019-03-19T19_49_51_720Z-debu.log
