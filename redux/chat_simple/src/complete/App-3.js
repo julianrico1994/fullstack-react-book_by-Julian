@@ -77,4 +77,4 @@ store.dispatch(deleteMessageAction);
     // -> `listener()` is called
 
 const App = { createStore, reducer, initialState }; // for tests
-export default App;
+// export default App;

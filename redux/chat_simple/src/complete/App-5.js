@@ -98,7 +98,7 @@ class MessageInput extends React.Component {
         >
           Submit
         </button>
-       </div>
+      </div>
     );
   }
 }

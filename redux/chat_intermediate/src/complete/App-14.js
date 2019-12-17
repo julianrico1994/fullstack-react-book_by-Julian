@@ -112,7 +112,8 @@ class App extends React.Component {
     return (
       <div className='ui segment'>
         <ThreadTabs tabs={tabs} />
-        <Thread thread={activeThread} />
+        {/* <Thread thread={activeThread} /> */}
+        <ThreadDisplay />
       </div>
     );
   }

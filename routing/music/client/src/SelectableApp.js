@@ -12,11 +12,12 @@ import AppComplete from "./components-complete/App-5";
 
 const components = {
   "App-5": AppComplete,
+  "App-4": App4,
   "App": App,
   "App-1": App1,
   "App-2": App2,
   "App-3": App3,
-  "App-4": App4
+  "App-5": AppComplete,
 };
 
 const SelectableApp = () => <SelectableComponents components={components} />;

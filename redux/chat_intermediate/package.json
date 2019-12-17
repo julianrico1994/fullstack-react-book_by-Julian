@@ -15,7 +15,7 @@
     "react-scripts": "1.1.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "set PORT=3001 && react-scripts start",
     "e2e": "nightwatch",
     "run-e2e": "concurrently -s first -k \"npm start\" \"sleep 15; npm run e2e\"",
     "build": "react-scripts build",

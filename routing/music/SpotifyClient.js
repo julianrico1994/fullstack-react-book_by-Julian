@@ -91,6 +91,7 @@ const SpotifyClient = {
   },
 
   _get(url) {
+    console.log(`   \n\n url: ${url} \n token: ${this.token} \n`)
     if (this.token) {
       return this._getWithToken(url, this.token)
     } else {

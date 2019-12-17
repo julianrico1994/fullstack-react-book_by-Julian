@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 
 import Album from './Album';
-import VerticalMenu from './VerticalMenu-1';
+import VerticalMenu from './VerticalMenu';
 import { client } from '../Client';
 
 const ALBUM_IDS = [

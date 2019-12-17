@@ -18,9 +18,7 @@ class App extends React.Component {
                 this.setState({
                   selectedFoods: [
                     ...this.state.selectedFoods.slice(0, idx),
-                    ...this.state.selectedFoods.slice(
-                      idx + 1, this.state.selectedFoods.length
-                    ),
+                    ...this.state.selectedFoods.slice(idx + 1, this.state.selectedFoods.length),
                   ],
                 })
               )

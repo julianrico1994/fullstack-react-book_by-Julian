@@ -29,7 +29,7 @@ class AlbumsContainer extends Component {
           fetched: true,
           albums: albums,
         })
-       ));
+      ));
   };
 
   render() {

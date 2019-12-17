@@ -51,4 +51,4 @@ console.log('State v2:');
 console.log(stateV2);
 
 const App = { createStore, reducer, initialState }; // for tests
-export default App;
+// export default App;
