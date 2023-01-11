@@ -68,7 +68,7 @@
     "prop-types": "15.5.10",
     "react": "15.5.4",
     "react-dom": "15.5.4",
-    "react-styleguidist": "4.1.0",
+    "react-styleguidist": "13.0.0",
     "webpack": "1.13.3"
   },
   "eslintConfig": {
